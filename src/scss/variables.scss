@@ -1,0 +1,22 @@
+// colors 
+$black: #363636;
+$red: #690000;
+$darkRed: #450000; //#690000;
+$white: #e6e6e6;
+$grey: #ccc;
+$blue: #000069;
+$darkBlue: #001F3F; // #000069;
+
+@mixin shadow {
+    box-shadow: $white 0 0 2rem;
+}
+
+@mixin glow {
+    box-shadow: $red 0 0 2rem;
+}
+@mixin textShadow {
+    text-shadow: $black .0rem .0rem .5rem ;
+}
+@mixin textGlow{
+    text-shadow: $white .0rem .0rem .5rem ;
+}

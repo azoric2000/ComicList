@@ -1,0 +1,108 @@
+.navbar {
+  @include shadow;
+  background-color: $darkBlue;
+  border-bottom: 0.1rem $white solid;
+  font-size: 1.4rem;
+  height: 8.5rem;
+  padding: 2.5rem;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 10;
+
+  .wrapper {
+    max-width: 99rem;
+    margin: 0 auto;
+
+    .grid {
+      display: grid;
+      grid-template-columns: 25rem 15rem 15rem 15rem;
+    }
+  }
+
+  a {
+    color: $white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    height: 36px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    &.textLink {
+      width: 15rem;
+      text-align: center; 
+      background-color: $red;
+      &.active {
+        background-color: $white;
+        border-radius: 12px;
+        color: $darkRed; 
+      }
+      &:nth-child(2){
+        border-top-left-radius: 1.2rem;
+        border-bottom-left-radius: 1.2rem;
+      }
+      &:last-child{
+        border-top-right-radius: 1.2rem;
+        border-bottom-right-radius: 1.2rem;
+      }
+    }
+    &.home,
+    &.home.active {
+      background-color: $darkBlue;
+      margin: -2.3rem 0 0 2rem;
+      padding: 0;
+      img {
+        height: 8rem;
+      }
+    }
+  }
+  .mobileMenu,
+  .mobileNav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  .navbar {
+    padding: 2.5rem 0 0 0;
+    .wrapper {
+      width: 100vw;
+      .grid {
+        display: block;
+        margin-top: -2.5rem;
+        width: 80%;
+        .textLink {
+          display: none;
+          &.active {
+            display: inline-block;
+            vertical-align: top;
+            margin: 2.5rem 3rem;
+          }
+        }
+      }
+    }
+    .mobileMenu {
+      display: block;
+      position: absolute;
+      right: 1rem;
+      font-size: 5rem;
+      top: 1.5rem;
+    }
+    .mobileNav {
+      display: none;
+      background-color: $darkBlue;
+      height: calc(100vh - 13.4rem);
+      a {
+        display: block;
+        font-size: 3rem;
+        height: 5.5rem;
+        width: 100%;
+        line-height: 5rem;
+        border-bottom: solid 0.1rem $white;
+        padding-left: 2rem;
+      }
+      &.open {
+        display: block;
+      }
+    }
+  }
+}

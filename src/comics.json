@@ -1,0 +1,154 @@
+{
+  "comics": [
+    {
+      "id": "1",
+      "NCBD": "1.1.2025",
+      "issues": [
+        {
+          "id": "4",
+          "title": "Ultimates",
+          "number": "8",
+          "publisher": "Marvel"
+        },
+        {
+          "id": "5",
+          "title": "Shazam",
+          "number": "19",
+          "publisher": "DC"
+        }
+      ]
+    },
+    {
+      "NCBD": "1.15.2025",
+      "id": "2",
+      "issues": [
+        {
+          "id": "1",
+          "title": "Transformers",
+          "number": "16",
+          "publisher": "Image"
+        },
+        {
+          "id": "2",
+          "title": "Black Panther",
+          "number": "12",
+          "publisher": "Marvel"
+        },
+        {
+          "id": "3",
+          "title": "GI Joe",
+          "number": "3",
+          "publisher": "Image"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "NCBD": "1.8.2025",
+      "issues": [
+        {
+          "id": "1",
+          "title": "Space Ghost",
+          "number": "9",
+          "publisher": "Dynamite"
+        },
+        {
+          "id": "2",
+          "title": "Green Lantern: Fractured Spectrum",
+          "number": "1",
+          "publisher": "DC",
+          "have": false
+        },
+        {
+          "id": "3",
+          "title": "GI Joe",
+          "number": "3",
+          "publisher": "Image"
+        },
+        {
+          "id": "4",
+          "title": "Ultimate Wolverine",
+          "number": "1",
+          "publisher": "Marvel"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "NCBD": "1.22.2025",
+      "issues": [
+        {
+          "id": "5",
+          "title": "Ultimate Spider-Man",
+          "number": "13",
+          "publisher": "Marvel"
+        },
+        {
+          "id": "6",
+          "title": "Void Rivals",
+          "number": "16",
+          "publisher": "Image"
+        },
+        {
+          "id": "7",
+          "title": "Superman",
+          "number": "22",
+          "publisher": "DC"
+        },
+        {
+          "id": "8",
+          "title": "Sectaurs",
+          "number": "3",
+          "publisher": "Nacellee Press"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "NCBD": "1.29.2025",
+      "issues": [
+        {
+          "id": "1",
+          "title": "Silverhawks",
+          "number": "1",
+          "publisher": "Dynamite"
+        },
+        {
+          "id": "2",
+          "title": "Thundercats",
+          "number": "12",
+          "publisher": "Dynamite"
+        },
+        {
+          "id": "3",
+          "title": "Green Lantern",
+          "number": "19",
+          "publisher": "DC"
+        },
+        {
+          "id": "4",
+          "title": "Lex Luthor Special",
+          "number": "1",
+          "publisher": "DC"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "issues": [
+        {
+          "id": "1",
+          "title": "Shazam",
+          "number": "20",
+          "publisher": "DC"
+        },
+        {
+          "id": "2",
+          "title": "Ultimates",
+          "number": "9",
+          "publisher": "Marvel"
+        }
+      ]
+    }
+  ]
+}

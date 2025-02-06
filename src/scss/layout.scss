@@ -1,0 +1,142 @@
+html {
+  font-size: 62.5%; // 16px * 0.625 = 10px;
+}
+
+h1 {
+  font-size: 1.2rem; // 10px * 1.8 = 18px;
+}
+
+body {
+//  background: url("../assets/comics.jpg");
+  background-attachment: fixed;
+  background-blend-mode:multiply;
+  background-color: rgba(0, 0, 128, 0.8);
+  background-size: cover;
+  color: $white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12rem;
+  font-size: 1.5rem;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+#root {
+    overflow: hidden;
+}
+.infinite-scrolling { 
+    background: url("../assets/comics.jpg");
+    background-repeat: repeat-x;
+    height: 100vh; 
+    width: 200vw; 
+    background-size: cover;
+    animation: slide 500s linear infinite;
+    z-index: 0;
+    position: fixed;
+}
+    @keyframes slide {
+        0% {
+          transform: translate3d(0, 0, 0);
+        }
+        50% {
+          transform: translate3d(-150vh, 0, 0); /* The image width */
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+          }
+      }
+.main { 
+    z-index: 10;
+  min-height: 100vh;
+  margin: 8.5rem auto 4.5rem auto; 
+  padding: 1rem 2.5rem 5rem 2.5rem;
+  width: 99rem;  
+
+
+  backdrop-filter: blur(69px);
+  -webkit-backdrop-filter: blur(69px);
+  box-shadow: 0 0 2.5rem $black;
+
+
+
+  .comicGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    max-width:calc(99rem - 5rem);
+    min-width: fit-content;
+    margin: 0 auto;
+ 
+    &.singlebook{
+        grid-template-columns: 1fr;
+        width: fit-content;
+    }
+  }
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 30rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+
+li {
+  margin-bottom: 1.2rem;
+}
+ul {
+  padding-left: 1.8rem;
+}
+
+
+.right {
+    text-align: right;
+}
+
+
+hr {
+    color: $darkRed;
+}
+
+.divider {
+    margin: 15px auto;
+    width: 100%;
+    height: .05rem;
+    background-color: $white;
+    box-shadow: 0px 0px 2px 2px $red;
+    border-radius: 2px;
+    clear: both;
+}
+ 
+
+ .issuesGrid {
+ margin: 1rem 0 0 2rem;
+ }
+
+ h2 {
+    color: $darkRed;
+    @include textGlow;
+ }
+
+ @media screen and (max-width: 989px) {
+  .main{
+    width: 100vw;
+    padding: 1rem;
+    
+    .comicGrid{
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
+  }
+
+  h2 {
+    color: $white;
+    @include textShadow
+  }
+ }
