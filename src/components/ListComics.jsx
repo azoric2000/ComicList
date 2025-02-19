@@ -12,7 +12,6 @@ const ListComics = ({ showLatest = false }) => {
         const res = await fetch(apiURL);
         const data = await res.json();
         setbooks(data);
-      } catch (error) {
         console.log("error fetching data, " + error);
       } finally {
         setLoading(false);

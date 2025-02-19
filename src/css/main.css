@@ -102,7 +102,7 @@ ul {
 }
 
 hr {
-  color: #450000;
+  color: #330000;
 }
 
 .divider {
@@ -110,7 +110,7 @@ hr {
   width: 100%;
   height: 0.05rem;
   background-color: #e6e6e6;
-  box-shadow: 0px 0px 2px 2px #690000;
+  box-shadow: 0px 0px 2px 2px #BB3333;
   border-radius: 2px;
   clear: both;
 }
@@ -120,7 +120,7 @@ hr {
 }
 
 h2 {
-  color: #450000;
+  color: #330000;
   text-shadow: #e6e6e6 0rem 0rem 0.5rem;
 }
 
@@ -169,12 +169,11 @@ h2 {
 .navbar a.textLink {
   width: 15rem;
   text-align: center;
-  background-color: #690000;
+  background-color: #BB3333;
 }
 .navbar a.textLink.active {
   background-color: #e6e6e6;
-  border-radius: 12px;
-  color: #450000;
+  color: #000069;
 }
 .navbar a.textLink:nth-child(2) {
   border-top-left-radius: 1.2rem;
@@ -216,6 +215,7 @@ h2 {
     display: inline-block;
     vertical-align: top;
     margin: 2.5rem 3rem;
+    width: fit-content;
   }
   .navbar .mobileMenu {
     display: block;
@@ -243,11 +243,11 @@ h2 {
   }
 }
 .card {
-  box-shadow: #690000 0 0 2rem;
+  box-shadow: #BB3333 0 0 2rem;
   background-color: #e6e6e6;
-  border: solid 0.2rem #690000;
+  border: solid 0.2rem #BB3333;
   border-radius: 1.2rem;
-  color: #450000;
+  color: #330000;
   font-size: 1.5rem;
   margin: 0 auto 2rem auto;
   padding: 2.5rem;
@@ -267,7 +267,7 @@ h2 {
   position: absolute;
   right: -10px;
   top: -10px;
-  background-color: #690000;
+  background-color: #BB3333;
   border-radius: 0.5rem;
   color: #e6e6e6;
   float: right;
@@ -276,7 +276,22 @@ h2 {
   cursor: pointer;
 }
 .card .editIcon:hover {
-  background-color: #450000;
+  background-color: #330000;
+}
+.card .detailIcon {
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  background-color: #000069;
+  border-radius: 0.5rem;
+  color: #e6e6e6;
+  float: right;
+  font-size: 3rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.card .detailIcon:hover {
+  background-color: #BB3333;
 }
 .card span {
   display: inline-block;
@@ -292,7 +307,7 @@ h2 {
   }
 }
 .footer {
-  background-color: #450000;
+  background-color: #330000;
   border-top: 0.1rem solid #e6e6e6;
   color: #e6e6e6;
   font-size: 1.2rem;
@@ -344,10 +359,10 @@ button {
   cursor: pointer;
 }
 button.primary {
-  background-color: #690000;
+  background-color: #BB3333;
 }
 button.primary:hover {
-  background-color: #450000;
+  background-color: #330000;
 }
 button.secondary {
   background-color: #000069;

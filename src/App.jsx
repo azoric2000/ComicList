@@ -10,6 +10,8 @@ import ComicsPage from "./pages/ComicsPage";
 import MainLayout from "./layouts/MainLayout";
 import AddPage from "./pages/AddPage.jsx";
 import EditPage from "./pages/EditPage.jsx";
+
+import ViewComics from "./pages/SinglePage.jsx";
 import "./css/main.css";
 
 function App() {
@@ -56,6 +58,10 @@ function App() {
         <Route
           path="/edit/:id"
           element={<EditPage deleteNcbdSubmit={deleteNcbdSubmit} updateNcbdSubmit={updateNcbdSubmit} isEdit={true} />}
+        />
+        <Route
+          path="/view/:id"
+          element={<ViewComics />}
         />
       </Route>
     )

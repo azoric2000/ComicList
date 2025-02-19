@@ -1,8 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {FaEdit} from 'react-icons/fa'
+import {FaEdit, FaArrowRight, FaArrowLeft} from 'react-icons/fa'
 
-const BookCards = ({id, ncbd, issues}) => {
+const BookCards = ({id, ncbd, issues, detail}) => {
  
   return (
     <div className='card'>
@@ -19,6 +19,7 @@ const BookCards = ({id, ncbd, issues}) => {
 
       }
       </ul>
+      {detail=== undefined ? <Link to={`/view/${id}`} ><FaArrowRight className='detailIcon' title='More Info' /></Link>: <>Additional information shows up here...<Link to={`/allcomics`} ><FaArrowLeft className='detailIcon' title='Back home ' /></Link></>}
     </div>
   )
 }

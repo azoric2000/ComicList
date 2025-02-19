@@ -135,6 +135,7 @@
     },
     {
       "id": "6",
+      "NCBD": "2.6.2025",
       "issues": [
         {
           "id": "1",
@@ -147,6 +148,48 @@
           "title": "Ultimates",
           "number": "9",
           "publisher": "Marvel"
+        },
+        {
+          "id": 3,
+          "title": "Wolverine",
+          "number": "3",
+          "publisher": "Marvel"
+        }
+      ]
+    },
+    {
+      "id": "9b0f",
+      "NCBD": "2.19.2025",
+      "issues": [
+        {
+          "id": 1,
+          "title": "Superman",
+          "number": "30",
+          "publisher": "DC"
+        },
+        {
+          "id": 2,
+          "title": "Spider-man",
+          "number": "39",
+          "publisher": "Marvel"
+        }
+      ]
+    },
+    {
+      "id": "4f9c",
+      "NCBD": "3.5.2025",
+      "issues": [
+        {
+          "id": 1,
+          "title": "Transformers",
+          "number": "12",
+          "publisher": "Image"
+        },
+        {
+          "id": 2,
+          "title": "Spider-man",
+          "number": "36",
+          "publisher": "Image"
         }
       ]
     }

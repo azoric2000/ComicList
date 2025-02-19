@@ -31,7 +31,7 @@ const Navbar = () => {
         </div>
         <FaBars className="mobileMenu" onClick={()=>setMenuOpen(!menuOpen)} />
           <div className={   menuOpen? 'mobileNav open': 'mobileNav'}>
-          <NavLink to="/" className="" >
+          <NavLink to="/" className=""  onClick={()=>setMenuOpen(false)}>
             {HOMETEXT}
           </NavLink>
           <NavLink to="/allcomics" className="" onClick={()=>setMenuOpen(false)}>

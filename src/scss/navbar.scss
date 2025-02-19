@@ -32,9 +32,8 @@
       text-align: center; 
       background-color: $red;
       &.active {
-        background-color: $white;
-        border-radius: 12px;
-        color: $darkRed; 
+        background-color: $white; 
+        color: $blue; 
       }
       &:nth-child(2){
         border-top-left-radius: 1.2rem;
@@ -76,6 +75,7 @@
             display: inline-block;
             vertical-align: top;
             margin: 2.5rem 3rem;
+            width: fit-content;
           }
         }
       }

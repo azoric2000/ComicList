@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import { FaPlus, FaTrashAlt, FaRedo } from "react-icons/fa";
 
@@ -14,7 +14,10 @@ const ComicForm = ({
   const [issues, setIssues] = useState(issueData.issues);
   const [issueTitle, setIssueTitle] = useState([]);
   const [issueNum, setIssueNum] = useState([]);
-  const [issuePub, setIssuePub] = useState("[]");
+  const [issuePub, setIssuePub] = useState([]);
+  const [wednesdays, setWednesdays] = useState([]);
+
+  let currentDate = new Date();
 
   const addIssue = () => {
     let issueID = issues.length + 1;
@@ -39,6 +42,31 @@ const ComicForm = ({
     });
   };
 
+  const getNextWednesdays = () => {
+    console.log("got to here");
+    const wednesdays = [];
+    const today = new Date();
+    let day = today.getDay();
+    let daysUntilWednesday = (3 - day + 7) % 7;
+
+    for (let i = 0; i < 4; i++) {
+      let nextWednesday = new Date(today);
+      nextWednesday.setDate(today.getDate() + daysUntilWednesday + i * 7);
+      nextWednesday = nextWednesday.toString().substring(0, 15);
+      console.log(nextWednesday);
+      wednesdays.push(nextWednesday);
+    }
+
+    setWednesdays(wednesdays);
+  };
+
+  useEffect(() => {
+    console.log("did effect");
+    if (wednesdays.length === 0) {
+      getNextWednesdays();
+    }
+  });
+
   return (
     <div className="card full">
       <h3>{isEdit ? `Edit List for Week: ${ncbd} ` : `Add New Comic List`} </h3>
@@ -47,35 +75,36 @@ const ComicForm = ({
         {isEdit ? (
           <b>{ncbd}</b>
         ) : (
-          <select
-            name="ncbd"
-            id="ncbd"
-            value={ncbd}
-            required
-            onChange={(e) => setNcbd(e.target.value)}
-          >
-            <option value="">-- select ---</option>
-            <option value="2.5.2025">2.5.2025</option>
-            <option value="2.12.2025">2.12.2025</option>
-            <option value="2.19.2025">2.19.2025</option>
-            <option value="2.26.2025">2.26.2025</option>
-            <option value="3.5.2025">3.5.2025</option>
-          </select>
+          <>
+            <select
+              name="ncbd"
+              id="ncbd"
+              value={ncbd}
+              multiple={false}
+              required
+              onChange={(e) => setNcbd(e.target.value)}
+            >
+              <option value="">-- select ---</option>
+              {wednesdays.map((wednesday, index) => (
+                <option key={index} value={wednesday}>
+                  {wednesday}
+                </option>
+              ))}
+            </select>
+          </>
         )}
       </div>
       <b>Issues:</b>
       <div className="divider"></div> {issues.length}
       {issues.length === 0 ? " issues this week" : " issues you to buy"}
- 
-        {issues.map((issue, index) => (
-          <div key={index}className="issuesGrid">
-            <button onClick={() => removeIssue(index)}>
-              <FaTrashAlt />
-            </button>
-            {issue.title} #{issue.number} | {issue.publisher}{" "}
-            
-          </div>
-        ))} 
+      {issues.map((issue, index) => (
+        <div key={index} className="issuesGrid">
+          <button onClick={() => removeIssue(index)}>
+            <FaTrashAlt />
+          </button>
+          {issue.title} #{issue.number} | {issue.publisher}{" "}
+        </div>
+      ))}
       <div className="divider"></div>{" "}
       <div>
         <div>
@@ -128,10 +157,10 @@ const ComicForm = ({
               className="secondary"
               onClick={() => updateNcbd(id, ncbd, issues)}
             >
-              <FaRedo /> Update 
+              <FaRedo /> Update
             </button>
             <button className="primary" onClick={() => deleteNcbd(id)}>
-             <FaTrashAlt/> Delete
+              <FaTrashAlt /> Delete
             </button>
           </>
         ) : (

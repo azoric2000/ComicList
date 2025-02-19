@@ -37,7 +37,7 @@ const EditPage = ({ deleteNcbdSubmit, updateNcbdSubmit }) => {
 
     const updateNCBD = {
       id,
-      ncbd,
+      NCBD: ncbd,
       issues,
     };
     updateNcbdSubmit(updateNCBD);

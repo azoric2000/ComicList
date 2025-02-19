@@ -37,6 +37,22 @@
         }
     }
 
+    .detailIcon {
+        position: absolute;
+        right: -10px;
+        bottom: -10px;
+        background-color: $blue;
+        border-radius: .5rem;
+        color: $white;
+        float: right;
+        font-size: 3rem;
+        padding: .5rem;
+        cursor: pointer;
+        &:hover {
+            background-color: $red;
+        }
+    }
+
     span {
         display: inline-block;
     }
